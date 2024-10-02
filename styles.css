@@ -7,21 +7,99 @@ LIGHT BLUE: #457B9D
 DARK BLUE: #1D3557
 
 */
-:root{
-    --color-red: #E63946;
-    --color-light: #F1FAEE;
-    --color-aqua: #A8DADC;
-    --color-blue-light: #457B9D;
-    --color-blue-dark: #1D3557;
+/*<uniquifier>: Use a uniquifier for the class name
+ <weight>: Use a value from 100 to 900
+*/
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+:root {
+  --color-red: #e63946;
+  --color-light: #f1faee;
+  --color-aqua: #a8dadc;
+  --color-blue-light: #457b9d;
+  --color-blue-dark: #1d3557;
+  --color-white: #fff;
+  --color-black: #333;
+  --ff-primary: "Inter", Arial, sans-serif;
+  --radius-unit: 10px;
+  --space-xs: 0.25rem;
+  --space-s: 0.5rem;
+  --space-m: 1.5rem;
 }
 
 body {
-    margin: 0;
-    text-align: center;
-    background-color: var(--color-light);
+  margin: 0;
+  text-align: center;
+  font-family: var(--ff-primary);
+  background-color: var(--color-white);
+  font-weight: 400;
+  color: var(--color-blue-dark);
 }
 
 img {
-    width: 100px;
+  width: 100px;
+}
+.image-round {
+  border-radius: 50%;
 }
 
+.hero {
+  background-image: url("./images/torshov.jpg");
+  background-size: cover;
+  display: flex;
+  color: var(--color-light);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+.hero-title {
+  background-color: var(--color-blue-dark);
+  border-radius: var(--radius-unit);
+  padding: var(--space-xs) var(--space-s);
+}
+
+.hero-subtitle {
+  background-color: var(--color-blue-light);
+  border-radius: var(--radius-unit);
+  padding: var(--space-xs) var(--space-s);
+  width: 50%;
+}
+
+.features-section {
+  background-color: var(--color-light);
+  padding-top: 2em;
+}
+
+.features-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+  padding: 2em;
+}
+
+.feature-title {
+  font-weight: 700;
+}
+
+.guide-section {
+  display: flex;
+  justify-content: center;
+}
+
+.guide-card {
+    display: flex;
+  background-color: var(--color-aqua);
+  color: var(--color-black);
+  width: 70%;
+  margin: 3em 0;
+  border-radius: 10px;
+  border-bottom: 7px solid var(--color-blue-dark);
+}
